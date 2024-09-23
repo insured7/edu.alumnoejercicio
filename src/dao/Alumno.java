@@ -2,6 +2,7 @@ package dao;
 
 public class Alumno {
 
+	private static int idContador = 0; //Contador estatico para autoincrementar ID
 	private int id;
 	private String nombre;
 	private String apellidos;
@@ -10,6 +11,19 @@ public class Alumno {
 	private String email;
 	private int numTlf;
 	
+	public Alumno(String nombre, String apellidos, String dni, String fechaNac, String email, int numTlf) {
+		this.id = ++idContador;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.dni = dni;
+		this.fechaNac = fechaNac;
+		this.email = email;
+		this.numTlf = numTlf;
+	}
+	
+	public Alumno() {
+		this.id = ++idContador; //Ya que al pasar el objeto uso este constructor vacio, añado 
+	}							//el incremento tambien aquí.
 	
 	public int getId() {
 		return id;
@@ -54,21 +68,9 @@ public class Alumno {
 		this.numTlf = numTlf;
 	}
 	
-	public Alumno(String nombre, String apellidos, String dni, String fechaNac, String email, int numTlf) {
-		super();
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.dni = dni;
-		this.fechaNac = fechaNac;
-		this.email = email;
-		this.numTlf = numTlf;
-	}
-	public Alumno() {
-		// TODO Auto-generated constructor stub
-	}
 	@Override
 	public String toString() {
-		return "Alumno [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", fechaNac=" + fechaNac
+		return "Alumno [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", fechaNac=" + fechaNac
 				+ ", email=" + email + ", numTlf=" + numTlf + "]";
 	}
 	

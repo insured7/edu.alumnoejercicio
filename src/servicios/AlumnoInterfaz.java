@@ -16,4 +16,11 @@ public interface AlumnoInterfaz {
 	 * Metodo que muestra una lista de todos los alumnos
 	 */
 	public void muestraAlumno(List<Alumno> listaAlumno);
+	
+	/**
+	 * Método que pide el dni del alumno, encuentra al alumno mediante un foreach y le pregunta 
+	 * el dato a modificar.
+	 */
+	
+	public void modificaAlumno(List<Alumno> listaAlumno);
 }

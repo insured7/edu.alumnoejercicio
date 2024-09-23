@@ -43,6 +43,7 @@ public class main {
 						break;
 					case 2:
 						System.out.println("Ha seleccionado la modificacion de usuario");
+						alumnoInt.modificaAlumno(listaAlumnos);
 						break;
 					case 3: 
 						System.out.println("Ha seleccionado la baja de alumnos");

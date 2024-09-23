@@ -13,7 +13,7 @@ public class MenuImpl implements MenuInterfaz {
 		System.out.println("1. Alta de alumno");
 		System.out.println("2. Modificación de alumno");
 		System.out.println("3. Baja de alumno");
-		// System.out.println("4. Mostrar alumnos");
+		System.out.println("4. Mostrar alumnos");
 		System.out.println("0. Salir");
 		
 		System.out.println("¿Que opción desea?  ");
