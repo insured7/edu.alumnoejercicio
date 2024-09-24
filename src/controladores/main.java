@@ -47,6 +47,7 @@ public class main {
 						break;
 					case 3: 
 						System.out.println("Ha seleccionado la baja de alumnos");
+						alumnoInt.eliminaAlumno(listaAlumnos);
 						break;
 					case 4: 
 						System.out.println("Mostrando alumnos: ");

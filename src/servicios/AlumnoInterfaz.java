@@ -23,4 +23,10 @@ public interface AlumnoInterfaz {
 	 */
 	
 	public void modificaAlumno(List<Alumno> listaAlumno);
+	
+	/**
+	 * Método que elimina a un alumno a traves de su dni.
+	 */
+	
+	public void eliminaAlumno(List<Alumno> listaAlumno);
 }

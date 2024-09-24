@@ -52,7 +52,7 @@ public class AlumnoImpl implements AlumnoInterfaz {
 
 	    try {
 	        for (Alumno alumno : listaAlumno) {
-	            if (alumno.getDni().equals(dniDeseado)) { // [mejor equals que "=="]
+	            if (alumno.getDni().equals(dniDeseado)) { // NO USAR "=="
 	                System.out.println("¿Qué desea modificar del alumno?");
 	                String opcion = scan.next(); // Lee la opción del usuario
 
@@ -92,6 +92,26 @@ public class AlumnoImpl implements AlumnoInterfaz {
 	    } catch (Exception e) {
 	        System.out.println("Error: " + e.getMessage());
 	    }
+	}
+
+	public void eliminaAlumno(List<Alumno> listaAlumno) {
+		Scanner scan = new Scanner(System.in);
+		int cont = 0; //contador
+		System.out.println("Digame el dni del alumno que desee eliminar.");
+		String dniElegido = scan.next();
+		
+		try {
+			for (Alumno alumno : listaAlumno) {
+				cont++;
+				if(alumno.getDni().equals(dniElegido)) {
+					System.out.println("El alumno que eliminará es el siguiente: ");
+					System.out.println(alumno);
+					listaAlumno.remove(cont-1);
+				}	
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	
 }
